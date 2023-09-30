@@ -2,8 +2,8 @@
 
 import { RecoilRoot } from 'recoil';
 
-function RecoilRootWrapper({ children }) {
+function RecoilRootProvider({ children }) {
   return <RecoilRoot>{children}</RecoilRoot>;
 }
 
-export default RecoilRootWrapper;
+export default RecoilRootProvider;

@@ -2,6 +2,6 @@
 
 import { Parallax } from '@react-spring/parallax';
 
-export default function ParallaxWrapper({ children, ...props }) {
+export default function ParallaxProvider({ children, ...props }) {
   return <Parallax {...props}>{children}</Parallax>;
 }

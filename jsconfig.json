@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"],
       "@public/*": ["./public/*"],
       "@images/*": ["./public/images/*"],
       "@components/*": ["./src/components/*"],
+      "@containers/*": ["./src/containers/*"],
       "@constants/*": ["./src/constants/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@utils/*": ["./src/utils/*"],
-      "@wrappers/*": ["./src/wrappers/*"]
+      "@providers/*": ["./src/providers/*"]
     }
   }
 }

@@ -1,9 +1,11 @@
-import Layer from '@wrappers/Layer';
+import Layer from '@/providers/Layer';
 
 export default function Heading({ children, className, ...props }) {
   return (
-    <Layer {...props} className={`${className} p-24`}>
-      <h3 className='uppercase text-4xl'>{children}</h3>
+    <Layer className={`p-24 ${className}`} {...props}>
+      <h3 className='inline-flex p-4 text-4xl text-white uppercase border-b border-white'>
+        {children}
+      </h3>
     </Layer>
   );
 }

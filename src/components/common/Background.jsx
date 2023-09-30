@@ -1,8 +1,8 @@
-import Layer from '@wrappers/Layer';
+import Layer from '@/providers/Layer';
 
 export default function Background({ children, className, ...props }) {
   return (
-    <Layer className={`${className} -z-10`} {...props}>
+    <Layer className={`-z-10 ${className}`} {...props}>
       {children}
     </Layer>
   );
