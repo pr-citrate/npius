@@ -1,12 +1,7 @@
-import Layer from '@/providers/Layer';
-
-export default function Title({ children, className, ...props }) {
+export default function Title({ children, className }) {
   return (
-    <Layer
-      className={`flex items-center justify-center text-center ${className}`}
-      {...props}
-    >
-      <h1 className='uppercase text-8xl'>{children}</h1>
-    </Layer>
+    <h1 className={`text-center uppercase text-8xl ${className}`}>
+      {children}
+    </h1>
   );
 }

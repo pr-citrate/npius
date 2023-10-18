@@ -1,12 +1,7 @@
-import Layer from '@/providers/Layer';
-
-export default function SubTitle({ children, className, ...props }) {
+export default function SubTitle({ children, className }) {
   return (
-    <Layer
-      className={`flex items-center justify-center text-center ${className}`}
-      {...props}
-    >
-      <h2 className='text-2xl capitalize'>{children}</h2>
-    </Layer>
+    <h2 className={`text-center capitalize text-2xl ${className}`}>
+      {children}
+    </h2>
   );
 }
