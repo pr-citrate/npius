@@ -12,8 +12,6 @@ import Section8 from '@containers/index/Section8';
 import Section9 from '@containers/index/Section9';
 import Section10 from '@containers/index/Section10';
 import Section11 from '@containers/index/Section11';
-import SnapPage from '@components/common/SnapPage';
-import SnapPages from '@components/common/SnapPages';
 
 import { useId } from 'react';
 
@@ -34,20 +32,12 @@ export default function Home() {
   ];
 
   return (
-    // <SnapPages>
     <ParallaxProvider
       pages={12}
-      innerStyle={{ overflowY: 'scroll', scrollSnapType: 'y mandatory' }}
-      // className={'h-screen overflow-y-scroll snap-mandatory snap-y'}
     >
-      {sections.map((Section, index) => (
-        <>
-          <SnapPage key={useId()} className={index}>
-            <Section />
-          </SnapPage>
-        </>
+      {sections.map((Section) => (
+            <Section key={useId()}/>
       ))}
     </ParallaxProvider>
-    // </SnapPages>
   );
 }

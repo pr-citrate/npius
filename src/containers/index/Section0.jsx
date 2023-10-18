@@ -10,7 +10,7 @@ export default function Section0() {
     <>
       <Background
         offset={offset}
-        className='bg-gradient-to-b from-sky-500 kvia-sky-500 to-sky-300'
+        className='bg-gradient-to-b from-sky-500 to-sky-300'
       />
       <Box
         className={'p-8 border-4 border-white bg-blue-600/20 backdrop-blur-xl'}

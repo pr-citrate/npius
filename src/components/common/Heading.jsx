@@ -1,4 +1,4 @@
-import Layer from '@/providers/Layer';
+import Layer from '@providers/Layer';
 
 export default function Heading({ children, className, ...props }) {
   return (

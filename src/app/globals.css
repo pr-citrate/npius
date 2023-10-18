@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    box-sizing: content-box;
+}
+
+
+.h-10v{
+    height:10vh
+}
+.h-20v{
+    height:20vh
+}
+.h-30v{
+    height:30vh
+}
+.h-40v{
+    height:40vh
+}
+.h-50v{
+    height:50vh
+}
+.h-60v{
+    height:60vh
+}
+.h-70v{
+    height:70vh
+}
+.h-80v{
+    height:80vh
+}
+.h-90v{
+    height:90vh
+}
+.h-100v{
+    height:100vh
+}
