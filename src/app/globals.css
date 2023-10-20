@@ -3,37 +3,37 @@
 @tailwind utilities;
 
 * {
-    box-sizing: content-box;
+  box-sizing: content-box;
 }
-
-
-.h-10v{
-    height:10vh
-}
-.h-20v{
-    height:20vh
-}
-.h-30v{
-    height:30vh
-}
-.h-40v{
-    height:40vh
-}
-.h-50v{
-    height:50vh
-}
-.h-60v{
-    height:60vh
-}
-.h-70v{
-    height:70vh
-}
-.h-80v{
-    height:80vh
-}
-.h-90v{
-    height:90vh
-}
-.h-100v{
-    height:100vh
+@layer utilities {
+  .h-10v {
+    height: calc(10vh + 1px);
+  }
+  .h-20v {
+    height: calc(20vh + 1px);
+  }
+  .h-30v {
+    height: calc(30vh + 1px);
+  }
+  .h-40v {
+    height: calc(40vh + 1px);
+  }
+  .h-50v {
+    height: calc(50vh + 1px);
+  }
+  .h-60v {
+    height: calc(60vh + 1px);
+  }
+  .h-70v {
+    height: calc(70vh + 1px);
+  }
+  .h-80v {
+    height: calc(80vh + 1px);
+  }
+  .h-90v {
+    height: calc(90vh + 1px);
+  }
+  .h-100v {
+    height: calc(100vh + 1px);
+  }
 }
