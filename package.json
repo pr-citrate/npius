@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "push": "yarn prisma db push",
+    "studio": "yarn prisma studio",
+    "format": "yarn prisma format",
+    "generate": "yarn prisma generate"
   },
   "dependencies": {
     "@next-auth/prisma-adapter": "^1.0.7",
