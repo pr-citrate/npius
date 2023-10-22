@@ -7,33 +7,33 @@
 }
 @layer utilities {
   .h-10v {
-    height: calc(10vh + 1px);
+    height: calc(10vh + 1px) !important;
   }
   .h-20v {
-    height: calc(20vh + 1px);
+    height: calc(20vh + 1px) !important;
   }
   .h-30v {
-    height: calc(30vh + 1px);
+    height: calc(30vh + 1px) !important;
   }
   .h-40v {
-    height: calc(40vh + 1px);
+    height: calc(40vh + 1px) !important;
   }
   .h-50v {
-    height: calc(50vh + 1px);
+    height: calc(50vh + 1px) !important;
   }
   .h-60v {
-    height: calc(60vh + 1px);
+    height: calc(60vh + 1px) !important;
   }
   .h-70v {
-    height: calc(70vh + 1px);
+    height: calc(70vh + 1px) !important;
   }
   .h-80v {
-    height: calc(80vh + 1px);
+    height: calc(80vh + 1px) !important;
   }
   .h-90v {
-    height: calc(90vh + 1px);
+    height: calc(90vh + 1px) !important;
   }
   .h-100v {
-    height: calc(100vh + 1px);
+    height: calc(100vh + 1px) !important;
   }
 }

@@ -17,13 +17,13 @@ export default function Section0() {
         speed={2}
       >
         <Title speed={offset} className={"text-cyan-50"}>
-          {/* npius */}
-          title
+          npius
+          {/* title */}
         </Title>
         <hr className="m-2" />
         <SubTitle offset={offset} className={"text-cyan-50"}>
-          {/* north pacific international undersea station */}
-          subtitle
+          north pacific international undersea station
+          {/* subtitle */}
         </SubTitle>
       </Box>
     </>
