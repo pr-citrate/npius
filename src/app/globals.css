@@ -3,8 +3,9 @@
 @tailwind utilities;
 
 * {
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
+
 @layer utilities {
   .h-10v {
     height: calc(10vh + 1px) !important;

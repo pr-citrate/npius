@@ -13,6 +13,8 @@ import Section9 from "@containers/index/Section9";
 import Section10 from "@containers/index/Section10";
 import Section11 from "@containers/index/Section11";
 
+import Header from "@components/common/Header";
+
 import { useId } from "react";
 
 export default function Home() {
@@ -33,6 +35,7 @@ export default function Home() {
 
   return (
     <ParallaxProvider pages={12}>
+      <Header />
       {sections.map((Section) => (
         <Section key={useId()} />
       ))}

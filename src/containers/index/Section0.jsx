@@ -2,7 +2,6 @@ import Background from "@components/common/Background";
 import Title from "@components/common/Title";
 import SubTitle from "@components/common/SubTitle";
 import Box from "@components/index/Box";
-import Auth from "@components/common/Auth";
 
 export default function Section0() {
   const offset = 0;
@@ -26,7 +25,6 @@ export default function Section0() {
           north pacific international undersea station
           {/* subtitle */}
         </SubTitle>
-        <Auth />
       </Box>
     </>
   );
