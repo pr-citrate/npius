@@ -1,6 +1,6 @@
 "use client";
-import { useState } from "react";
 import { signIn } from "next-auth/react";
+import { useState } from "react";
 
 export default function Auth({ className, ...props }) {
   const [isLoading, setIsLoading] = useState(false);

@@ -1,7 +1,7 @@
 import Background from "@components/common/Background";
-import Title from "@components/common/Title";
-import SubTitle from "@components/common/SubTitle";
 import Box from "@components/index/Box";
+import SubTitle from "@components/index/SubTitle";
+import Title from "@components/index/Title";
 
 export default function Section0() {
   const offset = 0;
