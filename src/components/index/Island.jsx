@@ -1,12 +1,12 @@
-import Layer from '@providers/Layer';
-import Image from 'next/image';
+import Layer from "@/providers/Layer";
+import Image from "next/image";
 
-import ground from '@images/island/ground.png';
-import waves from '@images/island/waves.png';
-import shade from '@images/island/shade.png';
-import coconut from '@images/island/coconut.png';
-import log from '@images/island/log.png';
-import leaves from '@images/island/leaves.png';
+import ground from "@public/images/island/ground.png";
+import waves from "@public/images/island/waves.png";
+import shade from "@public/images/island/shade.png";
+import coconut from "@public/images/island/coconut.png";
+import log from "@public/images/island/log.png";
+import leaves from "@public/images/island/leaves.png";
 
 export default function Island({
   speed = 0,
@@ -16,12 +16,12 @@ export default function Island({
   ...props
 }) {
   const images = [
-    { img: ground, spd: speed, alt: 'ground' },
-    { img: waves, spd: speed + 0.01, alt: 'waves' },
-    { img: shade, spd: speed - 0.04, alt: 'shade' },
-    { img: coconut, spd: speed - 0.1, alt: 'coconut' },
-    { img: log, spd: speed - 0.03, alt: 'log' },
-    { img: leaves, spd: speed - 0.04, alt: 'leaves' },
+    { img: ground, spd: speed, alt: "ground" },
+    { img: waves, spd: speed + 0.01, alt: "waves" },
+    { img: shade, spd: speed - 0.04, alt: "shade" },
+    { img: coconut, spd: speed - 0.1, alt: "coconut" },
+    { img: log, spd: speed - 0.03, alt: "log" },
+    { img: leaves, spd: speed - 0.04, alt: "leaves" },
   ];
 
   return (

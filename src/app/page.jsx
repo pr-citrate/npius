@@ -1,19 +1,19 @@
-import ParallaxProvider from "@providers/ParallaxProvider";
+import ParallaxProvider from "@/providers/ParallaxProvider";
 
-import Section0 from "@containers/index/Section0";
-import Section1 from "@containers/index/Section1";
-import Section2 from "@containers/index/Section2";
-import Section3 from "@containers/index/Section3";
-import Section4 from "@containers/index/Section4";
-import Section5 from "@containers/index/Section5";
-import Section6 from "@containers/index/Section6";
-import Section7 from "@containers/index/Section7";
-import Section8 from "@containers/index/Section8";
-import Section9 from "@containers/index/Section9";
-import Section10 from "@containers/index/Section10";
-import Section11 from "@containers/index/Section11";
+import Section0 from "@/containers/index/Section0";
+import Section1 from "@/containers/index/Section1";
+import Section2 from "@/containers/index/Section2";
+import Section3 from "@/containers/index/Section3";
+import Section4 from "@/containers/index/Section4";
+import Section5 from "@/containers/index/Section5";
+import Section6 from "@/containers/index/Section6";
+import Section7 from "@/containers/index/Section7";
+import Section8 from "@/containers/index/Section8";
+import Section9 from "@/containers/index/Section9";
+import Section10 from "@/containers/index/Section10";
+import Section11 from "@/containers/index/Section11";
 
-import Header from "@components/common/Header";
+import Header from "@/components/common/Header";
 
 import { useId } from "react";
 

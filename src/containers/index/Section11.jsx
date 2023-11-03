@@ -1,6 +1,6 @@
-import Background from "@components/common/Background";
-import Heading from "@components/index/Heading";
-import Station5 from "@components/index/stations/Station5";
+import Background from "@/components/common/Background";
+import Heading from "@/components/index/Heading";
+import Station5 from "@/components/index/stations/Station5";
 
 export default function Section11() {
   const offset = 11;

@@ -1,6 +1,6 @@
-import Background from "@components/common/Background";
-import Heading from "@components/index/Heading";
-import Station1 from "@components/index/stations/Station1";
+import Background from "@/components/common/Background";
+import Heading from "@/components/index/Heading";
+import Station1 from "@/components/index/stations/Station1";
 
 export default function Section2() {
   const offset = 2;

@@ -1,4 +1,4 @@
-import Background from '@components/common/Background';
+import Background from "@/components/common/Background";
 
 export default function Section7() {
   const offset = 7;
@@ -6,7 +6,7 @@ export default function Section7() {
     <>
       <Background
         offset={offset}
-        className='bg-gradient-to-b from-indigo-950 to-slate-950'
+        className="bg-gradient-to-b from-indigo-950 to-slate-950"
       />
     </>
   );

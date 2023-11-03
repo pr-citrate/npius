@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
     "paths": {
-      "@images/*": ["./public/images/*"],
+      // "@images/*": ["./public/images/*"],
       "@public/*": ["./public/*"],
 
-      "@auth/*": ["./src/auth/*"],
-      "@components/*": ["./src/components/*"],
-      "@containers/*": ["./src/containers/*"],
-      "@constants/*": ["./src/constants/*"],
-      "@db/*": ["./src/db/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@lib/*": ["./src/lib/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@providers/*": ["./src/providers/*"],
+      // "@auth/*": ["./src/auth/*"],
+      // "@components/*": ["./src/components/*"],
+      // "@containers/*": ["./src/containers/*"],
+      // "@constants/*": ["./src/constants/*"],
+      // "@db/*": ["./src/db/*"],
+      // "@hooks/*": ["./src/hooks/*"],
+      // "@lib/*": ["./src/lib/*"],
+      // "@utils/*": ["./src/utils/*"],
+      // "@providers/*": ["./src/providers/*"],
       "@/*": ["./src/*"]
     }
   }
