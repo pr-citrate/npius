@@ -35,7 +35,6 @@ export default function Home() {
 
   return (
     <ParallaxProvider pages={12}>
-      <Header />
       {sections.map((Section) => (
         <Section key={useId()} />
       ))}
