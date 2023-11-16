@@ -1,4 +1,4 @@
-import Background from "@/components/common/Background";
+import Background from "@/components/common/spring/Background";
 
 export default function Section9() {
   const offset = 9;

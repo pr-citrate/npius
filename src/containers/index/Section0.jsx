@@ -1,4 +1,4 @@
-import Background from "@/components/common/Background";
+import Background from "@/components/common/spring/Background";
 import Box from "@/components/index/Box";
 import SubTitle from "@/components/index/SubTitle";
 import Title from "@/components/index/Title";

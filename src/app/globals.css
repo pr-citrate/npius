@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
 @layer utilities {
   .h-10v {
     height: calc(10vh + 1px) !important;

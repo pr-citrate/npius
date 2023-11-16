@@ -1,4 +1,6 @@
 import prisma from "@/db/db";
+import { signJwtAccessToken } from "@/lib/jwt";
+signJwtAccessToken;
 
 export async function POST(request) {
   const body = await request.json();
@@ -15,8 +17,12 @@ export async function POST(request) {
 
   if (user && body.password === user.password) {
     const { password, ...userWithoutPassword } = user;
-    console.log(userWithoutPassword);
-    return new Response(JSON.stringify(userWithoutPassword));
+    const accessToken = signJwtAccessToken(userWithoutPassword);
+    const result = {
+      ...userWithoutPassword,
+      accessToken,
+    };
+    return new Response(JSON.stringify(result));
   } else {
     return new Response(JSON.stringify(null));
   }

@@ -8,7 +8,7 @@ import coconut from "@public/images/island/coconut.png";
 import log from "@public/images/island/log.png";
 import leaves from "@public/images/island/leaves.png";
 
-export default function Island({
+export default function Daehando({
   speed = 0,
   width,
   height,

@@ -1,5 +1,5 @@
-import Background from "@/components/common/Background";
-import Heading from "@/components/index/Heading";
+import Background from "@/components/common/spring/Background";
+import StationName from "@/components/index/StationName";
 import Station1 from "@/components/index/stations/Station1";
 
 export default function Section2() {
@@ -10,7 +10,7 @@ export default function Section2() {
         offset={offset}
         className="bg-gradient-to-b from-blue-400 to-blue-500"
       />
-      <Heading offset={offset}>station 1</Heading>
+      <StationName offset={offset}>station 1</StationName>
       <Station1 offset={offset} speed={2} />
     </>
   );
