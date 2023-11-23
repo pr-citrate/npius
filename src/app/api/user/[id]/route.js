@@ -1,6 +1,5 @@
 import prisma from "@/db/db";
 import { verifyJwt } from "@/lib/jwt";
-verifyJwt;
 
 export async function GET(request, { params }) {
   const accessToken = request.headers.get("authorization");

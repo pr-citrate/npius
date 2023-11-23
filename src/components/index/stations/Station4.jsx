@@ -1,4 +1,4 @@
-import Layer from "@/providers/Layer";
+import Layer from "@/components/common/spring/Layer";
 
 export default function Station4({ ...props }) {
   return (

@@ -1,4 +1,4 @@
-import Layer from "@/providers/Layer";
+import Layer from "@/components/common/spring/Layer";
 import Image from "next/image";
 
 import ground from "@public/images/island/ground.png";

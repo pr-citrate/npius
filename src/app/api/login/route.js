@@ -11,7 +11,11 @@ export async function POST(request) {
     },
   });
 
-  console.log("signin api", user);
+  if (!user) {
+    return new Response(JSON.stringify(null));
+  }
+
+  console.log("signin api", body, user);
 
   console.log(body.password, user.password);
 
