@@ -18,12 +18,10 @@ export default function Section0() {
       >
         <Title speed={offset} className={"text-cyan-50"}>
           npius
-          {/* title */}
         </Title>
         <hr className="m-2" />
         <SubTitle offset={offset} className={"text-cyan-50"}>
           north pacific international undersea station
-          {/* subtitle */}
         </SubTitle>
       </Box>
     </>

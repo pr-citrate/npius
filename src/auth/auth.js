@@ -20,8 +20,10 @@ export async function jwt({ token, user }) {
 
   return { ...token, ...user };
 }
-
-export const authOptions = {
+export const {
+  handlers: { GET, POST },
+  auth,
+} = NextAuth({
   adapter: PrismaAdapter(prisma),
 
   session: {
@@ -84,4 +86,4 @@ export const authOptions = {
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
   ],
-};
+});
