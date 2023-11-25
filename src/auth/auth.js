@@ -1,8 +1,9 @@
 import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
 import prisma from "@/db/db";
-import { PrismaAdapter } from "@next-auth/prisma-adapter";
+import { PrismaAdapter } from "@auth/prisma-adapter";
 import login from "@/auth/login";
+import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { toast } from "react-toastify";
 
@@ -24,6 +25,8 @@ export const {
   handlers: { GET, POST },
   auth,
 } = NextAuth({
+  secret: process.env.SECRET,
+
   adapter: PrismaAdapter(prisma),
 
   session: {
