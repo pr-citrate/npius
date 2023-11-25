@@ -1,12 +1,12 @@
 import jwt from "jsonwebtoken";
 
-const DEFAULT_SIGN_OPTION = {
-  expiresIn: "1h",
-};
+if (!process.env.SECRET_KEY) {
+  throw new Error("SECRET_KEY is not set");
+}
 
-export function signJwtAccessToken(payload, options = DEFAULT_SIGN_OPTION) {
+export function signJwtAccessToken(payload, expiresIn = "1h") {
   const secret_key = process.env.SECRET_KEY;
-  const token = jwt.sign(payload, secret_key, options);
+  const token = jwt.sign(payload, secret_key, { expiresIn });
   return token;
 }
 
@@ -17,6 +17,6 @@ export function verifyJwt(token) {
     return decoded;
   } catch (error) {
     console.log(error);
-    return null;
+    throw error;
   }
 }
