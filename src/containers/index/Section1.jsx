@@ -6,8 +6,7 @@ export default function Section1() {
   return (
     <>
       <Background offset={offset} factor={0.4} className="bg-sky-300" />
-      {/* factor must be 0.6 but set to 0.7 due to unknown 1px blank */}
-      <Background offset={offset + 0.4} factor={0.7} className="bg-blue-400" />
+      <Background offset={offset + 0.4} factor={0.6} className="bg-blue-400" />
       <Daehando
         offset={offset + 0.3}
         speed={1.1}
