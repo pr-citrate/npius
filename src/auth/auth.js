@@ -46,6 +46,12 @@ export const {
       },
       async authorize(credentials, request) {
         console.log(credentials);
+
+        if (!credentials.email || !credentials.password) {
+          toast.error("Both email and password are required.");
+          return null;
+        }
+
         try {
           const user = await login(credentials?.email, credentials?.password);
           console.log("authjs", user);
