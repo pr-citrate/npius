@@ -14,7 +14,8 @@ import Section10 from "@/containers/index/Section10";
 import Section11 from "@/containers/index/Section11";
 
 import { useId } from "react";
-import HeaderSpring from "@/components/common/spring/HeaderSpring";
+import Header from "@/components/common/Header";
+import Layer from "@/components/common/spring/Layer";
 
 export default function Home() {
   const sections = [
@@ -34,7 +35,9 @@ export default function Home() {
 
   return (
     <ParallaxProvider pages={12}>
-      <HeaderSpring />
+      <Layer sticky={{ start: 0, end: 11 }}>
+        <Header />
+      </Layer>
       {sections.map((Section) => (
         <Section key={useId()} />
       ))}

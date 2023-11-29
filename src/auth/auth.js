@@ -44,6 +44,7 @@ export const {
         email: { label: "email", type: "text" },
         password: { label: "password", type: "password" },
       },
+
       async authorize(credentials, request) {
         console.log(credentials);
 
