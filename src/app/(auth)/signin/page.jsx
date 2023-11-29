@@ -13,14 +13,24 @@ export default function signin({}) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    if (!emailRef.current.value || !passwordRef.current.value) {
+      toast.error("Both email and password are required.");
+      return null;
+    }
+
     const result = await signIn("credentials", {
       email: emailRef.current.value,
       password: passwordRef.current.value,
       redirect: false,
     });
-    console.log(result);
+    console.log("pagejsx result:", result);
+
     if (result.error) {
-      toast.error(`signin failed! (${result.error})`);
+      toast.error(
+        `signin failed! check your email or password. (${result.error})`
+      );
+      // CredentialsSignin : either email or password is wrong
     } else {
       toast.success("login!");
       router.push("/");

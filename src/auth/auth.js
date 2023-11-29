@@ -46,18 +46,11 @@ export const {
       },
 
       async authorize(credentials, request) {
-        console.log(credentials);
-
-        if (!credentials.email || !credentials.password) {
-          toast.error("Both email and password are required.");
-          return null;
-        }
-
         try {
+          console.log("authjs credential");
           const user = await login(credentials?.email, credentials?.password);
           console.log("authjs", user);
           if (user) {
-            // Any object returned will be saved in `user` property of the JWT
             return user;
           }
         } catch (error) {
