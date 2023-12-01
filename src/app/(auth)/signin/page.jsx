@@ -6,13 +6,16 @@ import CredentialFormInput from "@/components/auth/CredentialFormInput";
 import AuthFormButton from "@/components/auth/AuthFormButton";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
+
 export default function signin({}) {
-  const emailRef = useRef();
+  const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const router = useRouter();
 
-  const handleSubmit = async (event) => {
+  const handleCredentialSubmit = async (event) => {
     event.preventDefault();
+
+    console.log("handleCredentialSubmit");
 
     if (!emailRef.current.value || !passwordRef.current.value) {
       toast.error("Both email and password are required.");
@@ -27,6 +30,7 @@ export default function signin({}) {
     console.log("pagejsx result:", result);
 
     if (result.error) {
+      passwordRef.current.value = "";
       toast.error(
         `signin failed! check your email or password. (${result.error})`
       );
@@ -38,6 +42,10 @@ export default function signin({}) {
   };
 
   const handleGoogleSubmit = async (event) => {
+    event.preventDefault();
+
+    console.log("handleGoogleSubmit");
+
     const result = await signIn("google", {
       redirect: true,
       callbackUrl: "/",
@@ -45,7 +53,11 @@ export default function signin({}) {
   };
 
   const handleGithubSubmit = async (event) => {
-    const result = await signIn("Github", {
+    event.preventDefault();
+
+    console.log("handleGithubSubmit");
+
+    const result = await signIn("github", {
       redirect: true,
       callbackUrl: "/",
     });
@@ -54,7 +66,6 @@ export default function signin({}) {
   return (
     <>
       <h1 className="block text-2xl text-center text-slate-900">login</h1>
-      <AuthFormButton onClick={signOut}>signout</AuthFormButton>
       <CredentialFormInput
         inputRef={emailRef}
         id="email"
@@ -79,17 +90,21 @@ export default function signin({}) {
         password
       </CredentialFormInput>
 
-      <AuthFormButton onClick={handleSubmit}>Sign In with email</AuthFormButton>
+      <AuthFormButton onClick={handleCredentialSubmit}>
+        Sign In with email
+      </AuthFormButton>
 
       <hr className="w-[80%] borer border-slate-500" />
 
-      <AuthFormButton onClick={handleGoogleSubmit}>
+      <AuthFormButton onClick={handleGoogleSubmit} type="button">
         Sign In with Google
       </AuthFormButton>
 
-      <AuthFormButton onClick={handleGithubSubmit}>
+      <AuthFormButton onClick={handleGithubSubmit} type="button">
         Sign In with GitHub
       </AuthFormButton>
+
+      <AuthFormButton onClick={signOut}>signout</AuthFormButton>
     </>
   );
 }
