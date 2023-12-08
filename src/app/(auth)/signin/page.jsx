@@ -7,7 +7,7 @@ import AuthFormButton from "@/components/auth/AuthFormButton";
 import { toast } from "react-toastify";
 import { useRouter } from "next/navigation";
 
-export default function signin({}) {
+export default function SignIn() {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
   const router = useRouter();
