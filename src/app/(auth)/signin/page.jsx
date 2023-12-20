@@ -27,14 +27,18 @@ export default function SignIn() {
       password: passwordRef.current.value,
       redirect: false,
     });
+
     console.log("pagejsx result:", result);
 
     if (result.error) {
       passwordRef.current.value = "";
-      toast.error(
-        `signin failed! check your email or password. (${result.error})`
-      );
-      // CredentialsSignin : either email or password is wrong
+      if (result.error === "CredentialsSignin") {
+        toast.error(
+          `signin failed! check your email or password. (${result.error})`
+        );
+        // CredentialsSignin : either email or password is wrong
+      }
+      toast.error(`unknown error!. (${result.error})`);
     } else {
       toast.success("login!");
       router.push("/");

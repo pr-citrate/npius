@@ -11,6 +11,7 @@ export const {
   handlers: { GET, POST },
   auth,
 } = NextAuth({
+  debug: true,
   secret: process.env.SECRET,
 
   adapter: PrismaAdapter(prisma),
@@ -32,6 +33,7 @@ export const {
 
   pages: {
     signIn: "/signin",
+    signOut: "/signout",
   },
 
   providers: [
