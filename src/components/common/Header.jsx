@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Session from "@/components/common/Session";
 
 export default function Header({ className, ...props }) {
   return (
@@ -8,7 +7,6 @@ export default function Header({ className, ...props }) {
     >
       <Link href={"/"}>npuis</Link>
       <Link href={"/signout"}>signout</Link>
-      <Session />
       <Link href={"/signin"}>signIn</Link>
     </header>
   );

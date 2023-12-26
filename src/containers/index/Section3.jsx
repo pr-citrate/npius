@@ -1,6 +1,7 @@
 import Background from "@/components/common/spring/Background";
 import StationName from "@/components/index/StationName";
 import Station2 from "@/components/index/stations/Station2";
+import Core from "@/components/common/spring/Core";
 
 export default function Section3() {
   const offset = 3;
@@ -12,6 +13,7 @@ export default function Section3() {
       />
       <StationName offset={offset}>station 2</StationName>
       <Station2 offset={offset} speed={2} />
+      <Core offset={offset} className={"bg-gray-400"} />
     </>
   );
 }

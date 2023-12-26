@@ -1,10 +1,21 @@
 import Layer from "@/components/common/spring/Layer";
+import station1 from "@public/images/stations/Station1.png";
+import Image from "next/image";
 
-export default function Station1({ ...props }) {
+export default function Station1({ className, ...props }) {
   return (
     <>
-      <Layer className="flex items-center justify-center" {...props}>
-        <div className="bg-white rounded-lg w-36 h-36">station 1</div>
+      <Layer
+        className={`flex flex-col h-screen items-center justify-center z-10 ${className}`}
+        {...props}
+      >
+        <Image
+          src={station1}
+          alt={"station 1"}
+          width={1440}
+          height={1024}
+          priority
+        />
       </Layer>
     </>
   );

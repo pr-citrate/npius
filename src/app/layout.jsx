@@ -1,7 +1,6 @@
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 import { Inter } from "next/font/google";
-import ServerSessionProvider from "@/providers/ServerSessionProvider";
 import { ToastContainer } from "react-toastify";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,7 +27,7 @@ export default function RootLayout({ children }) {
           theme="light"
           limit={5}
         />
-        <ServerSessionProvider>{children}</ServerSessionProvider>
+        {children}
       </body>
     </html>
   );

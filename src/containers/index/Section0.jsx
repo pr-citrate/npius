@@ -12,7 +12,9 @@ export default function Section0() {
         className="bg-gradient-to-b from-sky-500 to-sky-300"
       />
       <Box
-        className={"p-8 border-4 border-white bg-blue-600/20 backdrop-blur-xl"}
+        className={
+          "p-8 border-4 max-w-[80%] border-white bg-blue-600/20 backdrop-blur-xl"
+        }
         offset={offset}
         speed={2}
       >
