@@ -3,7 +3,7 @@ import StationName from "@/components/index/StationName";
 import Station from "@/components/index/stations/Station";
 import Core from "@/components/common/spring/Core";
 
-import station1 from "@public/images/stations/station1.png";
+// import station1 from "@public/images/stations/station1.png";
 
 export default function Section2() {
   const offset = 2;
