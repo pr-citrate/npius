@@ -7,7 +7,7 @@ export default function Core({ className, offset, ...props }) {
       speed={0}
       {...props}
     >
-      <div className={`w-[30%] h-100v ${className}`} />
+      <div className={`w-[30vw] h-100v ${className}`} />
     </Layer>
   );
 }

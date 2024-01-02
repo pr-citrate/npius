@@ -17,11 +17,11 @@ export default function Section1() {
         layout={"fixed"}
       />
       <Layer
-        className={"flex justify-center items-center"}
+        className={"flex flex-col justify-center items-center"}
         offset={offset + 0.95}
         speed={1.1}
       >
-        <div className={"bg-gray-400 w-[30%] h-screen"} />
+        <div className={"bg-gray-400 w-[30vw] h-screen md:h-90v"} />
       </Layer>
     </>
   );
