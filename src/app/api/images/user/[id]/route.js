@@ -1,5 +1,3 @@
-// File: /app/someSubdirectory/image.route.js
-
 import fs from "fs/promises";
 import path from "path";
 
