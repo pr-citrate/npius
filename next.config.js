@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["npius.dev"],
+    remotePatterns: {
+      protocol: "https",
+      hostname: "npius.dev",
+      port: "",
+      pathname: "/**",
+    },
   },
 };
 
