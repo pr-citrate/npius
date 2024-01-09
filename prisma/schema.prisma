@@ -9,10 +9,47 @@ datasource db {
 }
 
 model User {
-  id            String    @id @default(cuid())
-  username      String?
-  email         String?   @unique
-  emailVerified DateTime?
-  password      String?
-  image         String?
+  id          Int         @id @default(autoincrement())
+  name        String
+  departure   Departure
+  nationality Nationality
+  station     Station
+  infinite    Boolean
+  description String?
+}
+
+enum Nationality {
+  KOREA
+  JAPAN
+  RUSSIA
+  CHINA
+  USA
+  NEWZEALAND
+  AUSTRAILIA
+  CANADA
+}
+
+enum Departure {
+  DEEPBLUE
+  ENGINEER_GA
+  ENGINEER_NA
+  ENGINEER_DA
+  ENGINEER_RA
+  ENGINEER_MA
+  ENGINEER_BA
+  ENGINEER_SA
+  ENGINEER_A
+  MINING
+  RESEARCH
+  OPERATION_SUPPORT
+	@@map("departure")
+}
+
+enum Station {
+  DAEHANDO
+  STATION1
+  STATION2
+  STATION3
+  STATION4
+  STATION5
 }
