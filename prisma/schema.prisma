@@ -1,5 +1,6 @@
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["fullTextSearch", "fullTextIndex"]
 }
 
 datasource db {
@@ -16,6 +17,8 @@ model User {
   station     Station
   infinite    Boolean
   description String?
+  
+  @@fulltext([name])
 }
 
 enum Nationality {
