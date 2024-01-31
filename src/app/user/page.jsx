@@ -1,35 +1,63 @@
 "use client";
 
+// Import useEffect and useState for React and your custom useDebounce hook
+import { useRef, useState, useEffect } from "react";
+import useDebounce from "@/hooks/useDebounce";
 import SearchInput from "@/components/common/SearchInput";
 import SearchPreview from "@/components/common/SearchPreview";
-import { useRef, useState } from "react";
+import { useRouter } from "next/navigation"; // Corrected from 'next/navigation'
 
 export default function User() {
+  const [inputValue, setInputValue] = useState(""); // State to track input value
   const [results, setResults] = useState([]);
   const inputRef = useRef(null);
+  const router = useRouter();
 
-  const handleSearch = async () => {
-    const query = inputRef?.current?.value;
-    if (query) {
-      console.log(query);
-      await fetch(`http://localhost:3000/api/user?query=${query}`)
-        .then((res) => res.json())
-        .then((res) => setResults(res));
-    } else {
-      setResults([]);
+  const debouncedSearchTerm = useDebounce(inputValue, 300);
+
+  useEffect(() => {
+    const handleSearch = async () => {
+      const query = debouncedSearchTerm.trim();
+      if (!/^[\*]*$/.test(query)) {
+        console.log(query);
+        await fetch(`http://localhost:3000/api/user?query=${query}`)
+          .then((res) => res.json())
+          .then((res) => setResults(res));
+      } else {
+        setResults([]);
+      }
+    };
+
+    if (debouncedSearchTerm) {
+      handleSearch();
     }
+  }, [debouncedSearchTerm]);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (results[0]) {
+      router.push(`/user/${results[0].id}`);
+    }
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
   };
 
   return (
     <form
       className="flex flex-col items-center justify-center w-full h-full bg-sky-100"
-      onChange={handleSearch}
+      onSubmit={handleSubmit}
     >
       <div className="min-w-[320px] max-w-md rounded-md min-h-[300px]">
-        <SearchInput inputRef={inputRef} />
+        <SearchInput inputRef={inputRef} onChange={handleInputChange} />
         <ul className="w-full bg-sky-50">
           {results.map((result) => (
-            <SearchPreview key={result.id} name={result.name} />
+            <SearchPreview
+              key={result.id}
+              name={result.name}
+              href={`http://localhost:3000/user/${result.id}`}
+            />
           ))}
         </ul>
       </div>

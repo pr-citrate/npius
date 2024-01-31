@@ -12,13 +12,14 @@ datasource db {
 model User {
   id          Int         @id @default(autoincrement())
   name        String
+  koreanName  String
   departure   Departure
   nationality Nationality
   station     Station
   infinite    Boolean
   description String?
   
-  @@fulltext([name])
+  @@fulltext([name, koreanName])
 }
 
 enum Nationality {

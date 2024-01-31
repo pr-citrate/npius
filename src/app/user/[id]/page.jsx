@@ -17,10 +17,10 @@ export default async function UserPage({ params }) {
     return notFound();
   }
 
-  const { id, description, infinite, ...user } = fetchedUser;
+  const { id, description, infinite, koreanName, ...user } = fetchedUser;
 
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen p-12 bg-sky-50">
+    <main className="flex flex-col items-center justify-center p-12 grow bg-sky-50">
       <h1 className="mb-5 text-3xl sm:text-5xl">{user.name}</h1>
       <div className="flex flex-wrap items-center justify-center max-w-2xl p-5 m-4 overflow-hidden bg-sky-100 rounded-3xl">
         <Image
@@ -29,6 +29,7 @@ export default async function UserPage({ params }) {
           width={300}
           height={300}
           className="max-w-[50%] min-w-[250px] rounded-md"
+          priority
         />
         <div className="flex flex-col items-center max-w-[50%] min-w-[250px] justify-evenly p-4">
           {description && <p className="p-4 text-center">{description}</p>}

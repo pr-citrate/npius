@@ -9,7 +9,6 @@ export async function GET(request, { params }) {
         id: parseInt(id),
       },
     });
-    console.log(user);
     return new Response(JSON.stringify(user), {
       headers: {
         "Content-Type": "application/json",
