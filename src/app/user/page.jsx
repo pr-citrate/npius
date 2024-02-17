@@ -44,13 +44,23 @@ export default function User() {
     setInputValue(event.target.value);
   };
 
+  const handleKeyDown = (event) => {
+    if (event.key == "ArrowDown") {
+      document.querySelector(".preview")?.focus();
+    }
+  };
+
   return (
     <form
       className="flex flex-col items-center justify-center w-full h-full bg-sky-100"
       onSubmit={handleSubmit}
     >
       <div className="min-w-[320px] max-w-md rounded-md min-h-[300px]">
-        <SearchInput inputRef={inputRef} onChange={handleInputChange} />
+        <SearchInput
+          inputRef={inputRef}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
+        />
         <ul className="w-full bg-sky-50">
           {results.map((result) => (
             <SearchPreview
